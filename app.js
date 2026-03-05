@@ -17,6 +17,8 @@ const statFavs = document.querySelector("#statFavs");
 
 const emptyState = document.querySelector("#emptyState");
 
+// Variables de estado
+
 let filtroActual = "all";
 let contador = 4;
 
