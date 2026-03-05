@@ -1,6 +1,9 @@
+// Seleccion de elementos
+
 const form = document.querySelector("#formTarea");
 const inputTitulo = document.querySelector("#inputTitulo");
 const selectTag = document.querySelector("#selectTag");
+
 const lista = document.querySelector("#listaTareas");
 
 const inputBuscar = document.querySelector("#inputBuscar");
