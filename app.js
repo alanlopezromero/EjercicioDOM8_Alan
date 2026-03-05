@@ -24,40 +24,41 @@ let contador = 4;
 
 
 
-// AGREGAR TAREA
-form.addEventListener("submit", function(e) {
+// Agregar nueva tarea
+
+form.addEventListener("submit", function(e){
+
   e.preventDefault();
 
   const titulo = inputTitulo.value.trim();
   const tag = selectTag.value;
 
-  if (titulo === "") return;
+  if(titulo === "") return;
 
   const li = document.createElement("li");
+
   li.className = "card";
   li.dataset.id = "t" + contador++;
   li.dataset.tag = tag;
   li.dataset.fav = "0";
 
   li.innerHTML = `
-        <div class="card__head">
-          <span class="badge">${tag}</span>
-          <div class="actions">
-            <button class="icon" type="button" data-action="fav">☆</button>
-            <button class="icon" type="button" data-action="done">✓</button>
-            <button class="icon danger" type="button" data-action="del">🗑</button>
-          </div>
-        </div>
-        <p class="card__title">${titulo}</p>
+  <div class="card__head">
+    <span class="badge">${tag}</span>
+    <div class="actions">
+      <button class="icon" type="button" data-action="fav">☆</button>
+      <button class="icon" type="button" data-action="done">✓</button>
+      <button class="icon danger" type="button" data-action="del">🗑</button>
+    </div>
+  </div>
+  <p class="card__title">${titulo}</p>
   `;
 
   lista.appendChild(li);
 
   inputTitulo.value = "";
 
-  aplicarFiltros();
 });
-
 
 
 // DELEGACION DE EVENTOS
