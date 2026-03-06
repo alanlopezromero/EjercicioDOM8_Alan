@@ -17,14 +17,14 @@ const statFavs = document.querySelector("#statFavs");
 
 const emptyState = document.querySelector("#emptyState");
 
-// Variables de estado
+// Variables de estado es pra que agacomo tipo contador
 
 let filtroActual = "all";
 let contador = 4;
 
 
 
-// Agregar nueva tarea
+// Agregar nueva tarea 
 
 form.addEventListener("submit", function(e){
 
@@ -71,6 +71,8 @@ lista.addEventListener("click", function(e) {
   const accion = boton.dataset.action;
 
 
+
+  //son condiciones que tienen acciones
 
   // ELIMINAR
   if (accion === "del") {
@@ -132,6 +134,7 @@ inputBuscar.addEventListener("input", aplicarFiltros);
 
 
 // LIMPIAR BUSQUEDA
+//el boton limpiar tiene  una funcion donde imputBucar.value  tiene de valor  nada por lo consiguiente asi se queda
 btnLimpiar.addEventListener("click", function(){
 
   inputBuscar.value = "";
